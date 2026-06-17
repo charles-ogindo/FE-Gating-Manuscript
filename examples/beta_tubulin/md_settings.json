@@ -1,0 +1,18 @@
+{
+  "_comment": "Explicit-solvent MD settings for the beta-tubulin / taxol replicate protocol. Mirrors SETTINGS_TEMPLATE in scripts/run_replicates_taxol.py. Maps to backend.app.md.job.MdRunSettings. The octahedron box + A439-451 truncation are load-bearing: they reproduce the reference ~191k-atom system (cube + no truncation inflate it to ~680k).",
+  "production_ps": 1000.0,
+  "snapshot_every_ps": 5.0,
+  "temperature_k": 300.0,
+  "solvent": "explicit",
+  "water_model": "tip3p",
+  "water_padding_nm": 1.0,
+  "ionic_strength_molar": 0.15,
+  "pressure_bar": 1.0,
+  "barostat_frequency_steps": 25,
+  "npt_equilibration_ps": 100.0,
+  "position_restraint_k_kj_per_mol_per_nm2": 1000.0,
+  "box_shape": "octahedron",
+  "truncate_chain_ranges": [
+    {"chain": "A", "from_resseq": 439, "to_resseq": 451}
+  ]
+}

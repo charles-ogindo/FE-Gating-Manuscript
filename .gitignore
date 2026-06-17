@@ -1,0 +1,60 @@
+# ---- Job artifacts / data / trajectories (evidence is the CODE, not the data) ----
+jobs/
+uploads/
+*.dcd
+*.xtc
+*.trr
+*.nc
+*.h5
+frames/
+*_out.pdbqt
+out.pdbqt
+final_state.xml
+# Large structures / trajectories — fetch 1JFF yourself (see examples/)
+*.pdb
+*.pdbqt
+*.cif
+!examples/**/*.pdb        # (none committed, but keep the door open for tiny example stubs)
+
+# ---- Databases / job catalog contents ----
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.sql
+
+# ---- Secrets / credentials / env ----
+.env
+.env.*
+*.pem
+*.key
+*.crt
+secrets/
+credentials*.json
+*token*
+*secret*
+
+# ---- Python caches / build ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# ---- Conda / venv ----
+.venv/
+venv/
+env/
+
+# ---- Editor / OS ----
+.vscode/
+.idea/
+.DS_Store
+*.swp

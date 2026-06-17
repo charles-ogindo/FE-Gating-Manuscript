@@ -1,0 +1,6 @@
+{
+  "_comment": "Docking search box for the taxane site of beta-tubulin, derived from the reference taxol (TA1) ligand identity in PDB 1JFF via the corrected ligand-identity box logic (see README). Center and size are in Angstroms.",
+  "center": [-0.399, -16.403, 14.621],
+  "size": [25.554, 29.577, 25.225],
+  "source": "reference_ligand"
+}
