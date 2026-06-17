@@ -772,8 +772,10 @@ def compute_pairwise_consensus_rmsds(
 # Main
 # ---------------------------------------------------------------------------
 
-JOBS_ROOT = Path("/home/xchem/projects/docking_app2/jobs")
-DOCS_ROOT = Path("/home/xchem/projects/docking_app2/docs")
+JOBS_ROOT = Path(__file__).resolve().parents[1] / "jobs"
+DOCS_ROOT = Path(__file__).resolve().parents[1] / "docs"
+JOBS_ROOT.mkdir(parents=True, exist_ok=True)
+DOCS_ROOT.mkdir(parents=True, exist_ok=True)
 TAXOL_SMILES = ("O[C@@]12[C@@H](OC(=O)c3ccccc3)[C@@H]3[C@]4(OC(=O)C)CO[C@@H]4"
                 "C[C@H](O)[C@@]3(C)C(=O)[C@H](OC(=O)C)C(=C([C@@H](OC(=O)[C@H]"
                 "(O)[C@@H](NC(=O)c3ccccc3)c3ccccc3)C1)C)C2(C)C")

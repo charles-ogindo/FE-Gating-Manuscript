@@ -43,7 +43,8 @@ from typing import Any, Dict, List, Optional
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from backend.app.core.config import JOBS_DIR
 
-DOCS = Path("/home/xchem/projects/docking_app2/docs")
+DOCS = Path(__file__).resolve().parents[1] / "docs"
+DOCS.mkdir(parents=True, exist_ok=True)
 MANIFEST_PATH = DOCS / "replicates_taxol_manifest.json"
 AGG_MD = DOCS / "replicates_taxol_aggregation.md"
 AGG_CSV = DOCS / "replicates_taxol_aggregation.csv"

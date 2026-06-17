@@ -45,7 +45,8 @@ from stability_diagnostics import (  # type: ignore
     parse_pdb_frame, kabsch_rotation, POCKET_RADIUS_A,
 )
 
-DOCS = Path("/home/xchem/projects/docking_app2/docs")
+DOCS = Path(__file__).resolve().parents[1] / "docs"
+DOCS.mkdir(parents=True, exist_ok=True)
 REFERENCE_RUN = "5bc61f59-834f-4e71-a492-d32ddfdc7326"
 
 # Same compound mapping used elsewhere in this repo

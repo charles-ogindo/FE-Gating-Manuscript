@@ -51,7 +51,8 @@ from stability_diagnostics import (  # type: ignore
     EQ_WINDOW_LAST_FRAC,
 )
 
-DOCS_ROOT = Path("/home/xchem/projects/docking_app2/docs")
+DOCS_ROOT = Path(__file__).resolve().parents[1] / "docs"
+DOCS_ROOT.mkdir(parents=True, exist_ok=True)
 
 # Canonical reference for the pocket-residue set definition.
 REFERENCE_RUN_ID = "5bc61f59-834f-4e71-a492-d32ddfdc7326"  # explicit taxol pose 0

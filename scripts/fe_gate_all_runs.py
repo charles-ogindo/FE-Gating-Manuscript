@@ -27,7 +27,8 @@ from backend.app.free_energy import (
     BACKBONE_FINAL_RMSD_WARN_A, WINDOW_DURATION_WARN_PS,
 )
 
-DOCS = Path("/home/xchem/projects/docking_app2/docs")
+DOCS = Path(__file__).resolve().parents[1] / "docs"
+DOCS.mkdir(parents=True, exist_ok=True)
 
 # Same compound-naming map as all_md_diagnostics.py
 DOCKING_TO_LIGAND_TO_COMMON = {
