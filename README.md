@@ -20,6 +20,7 @@ backend/app/
   free_energy/        gating criteria, MM-GBSA scoring, convergence sampling, artifact schema
     gating.py           stability + free-energy gate logic (validate(), GatingResult)
     sampling.py         convergence / sampling-plan logic
+    energy_convergence.py  autocorrelation-corrected convergence + N_eff (statistical inefficiency g, corrected SEM)
     mmgbsa.py           MM-GBSA energy decomposition
     mmgbsa_runner.py    runs MM-GBSA over MD frames
     protocol.py         end-to-end FE protocol descriptor
@@ -47,10 +48,14 @@ scripts/
   all_md_diagnostics.py       per-run MD diagnostics
   corrected_fe_gate.py        corrected free-energy gate
   fe_gate_all_runs.py         free-energy gate across runs
+  fe_windows.py               operative-window ΔG + N_eff (autocorrelation-corrected SEM); regenerates Table 4
   run_fe_qualifying.py        MM-GBSA on gate-qualifying runs
   pocket_aligned_rmsd.py      pocket-frame RMSD diagnostic
 docs/
   meeko_env.lock.txt    exact conda environment (conda list --explicit)
+  taxol_stable_fe_spread.{md,csv}        per-run operative-window ΔG, corrected SEM, N_eff (Table 4)
+  replicates_taxol_aggregation.{md,csv}  per-replicate ΔG aggregation
+  energy_convergence_calibration.json    per-run statistical-inefficiency (g) / N_eff calibration series
 examples/beta_tubulin/  minimal example inputs (SMILES, docking box, MD settings; receptor = PDB 1JFF)
 ```
 
@@ -129,6 +134,57 @@ PDB **1JFF** yourself — see that folder's README). The protocol:
 > which is part of the private product and not included here. They are included
 > as the **authoritative, unedited record of the exact protocol and commands**;
 > running them end-to-end against real jobs requires the full application.
+
+## 4. The gate vs. sampling adequacy (two independent checks)
+
+These are two **distinct** checks and are deliberately not conflated:
+
+- **Structural stability gate** — binary pass/fail on the trajectory, two conditions:
+  - **Core-contact retention** (`C4`): top-5 protein-residue contact persistence ≥ 65 % over the equilibrium window.
+  - **Pose convergence** (`C1` + `C3`): eq-window begin-vs-end pocket-RMSD Δ < 0.4 Å, with the ligand held in-pocket (in-pocket fraction + COM displacement).
+
+  Implemented in `scripts/corrected_fe_gate.py` (the corrected gate — it ignores
+  the legacy `summary.verdict`) and `md/analyze.py::classify_stability`.
+- **Sampling adequacy** — separate and advisory: `N_eff ≥ 10`, an
+  autocorrelation-corrected effective-sample-size check applied **downstream at
+  the MM-GBSA / replicate FE stage**, computed by
+  `backend/app/free_energy/energy_convergence.py` (`corrected_sem`;
+  `n_eff = N/g`; floor `LOW_NEFF_FRAMES = 10`). It flags under-sampled windows
+  for **extension**. It is **not** a structural-gate criterion, and it is
+  **not** evaluated on the reference run `5bc61f59`.
+
+### Worked example — `5bc61f59` (taxol pose 0, explicit TIP3P, 201 frames)
+
+This run illustrates the **structural gate only**. It qualifies on all three
+structural criteria: `C1` Δ(begin−end) = 0.07 Å, `C3` in-pocket fraction 1.00 /
+COM 1.29 Å, `C4` top-5 persistence 99.33 %. It is labelled `drifting` under the
+legacy `summary.verdict` gate, which the corrected gate ignores **by design**.
+**No operative-window N_eff is computed or attributed to `5bc61f59`** — sampling
+adequacy is a downstream FE-stage check, and this run is the structural-gate
+exemplar, not an FE candidate.
+
+## 5. Reproducing Table 4 (replicate N_eff / ΔG)
+
+The replicate FE aggregation outputs are included under `docs/`:
+
+- `taxol_stable_fe_spread.{md,csv}` — per-run operative-window ΔG, corrected SEM,
+  and **N_eff** (including the `pose0_rep5` run flagged `N_eff 8.8 < floor 10`
+  for extension).
+- `replicates_taxol_aggregation.{md,csv}` — per-replicate ΔG aggregation.
+- `energy_convergence_calibration.json` — per-run statistical-inefficiency (`g`)
+  / N_eff calibration series.
+
+They are regenerable by running `scripts/fe_windows.py <md_id> …` over the
+replicate MM-GBSA energy series; N_eff is computed there via
+`backend/app/free_energy/energy_convergence.py` (`corrected_sem`, `n_eff = N/g`,
+floor `LOW_NEFF_FRAMES = 10`). The Table 4 values come from these replicate FE
+runs — **not** from the `5bc61f59` reference run.
+
+> Like the step-3 orchestration scripts, `fe_windows.py` reads each run's stored
+> MM-GBSA ΔG series from the per-job artifact tree under `JOBS_DIR`; those job
+> artifacts are not committed (see Notes), so end-to-end regeneration requires
+> the original job outputs. The included `docs/` files are the authoritative
+> recorded result.
 
 ## Notes
 
