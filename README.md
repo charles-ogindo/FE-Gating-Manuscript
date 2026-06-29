@@ -11,6 +11,10 @@ test suite. The full interactive application (web frontend, Mol\* viewer, API
 server, auth, job database, deployment) is **deliberately excluded** — it is
 product, not evidence.
 
+> **Repository updates.** Notable changes to this repository are tracked in
+> [`CHANGELOG.md`](CHANGELOG.md) (latest: 2026-06-29 — repository consolidated
+> and corrected; history rewritten — re-clone or reset to current `main`).
+
 ---
 
 ## What's here
