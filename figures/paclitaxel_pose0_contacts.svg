@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" font-family="Helvetica, Arial, sans-serif">
+  <title>Detected protein-ligand interactions for the rank-0 paclitaxel pose</title>
+  <desc>Paclitaxel at centre. Each contact line is coloured by interaction type and also labelled in words: hydrogen bonds to Thr276 and Gly370, a salt bridge to Asp26, a pi-cation contact to His229, and hydrophobic contacts to Val23, Pro274 and Leu371.</desc>
+
+  <g stroke-width="2" stroke-linecap="round">
+    <line x1="340" y1="222" x2="340" y2="72"  stroke="#2C7BC0"/>
+    <line x1="300" y1="224" x2="208" y2="98"  stroke="#2C7BC0"/>
+    <line x1="380" y1="224" x2="472" y2="98"  stroke="#B98A2A"/>
+    <line x1="270" y1="250" x2="162" y2="250" stroke="#6A5DC0"/>
+    <line x1="410" y1="250" x2="518" y2="250" stroke="#6B8C4E"/>
+    <line x1="300" y1="278" x2="180" y2="388" stroke="#6B8C4E"/>
+    <line x1="380" y1="278" x2="500" y2="388" stroke="#6B8C4E"/>
+  </g>
+
+  <g fill="#333333" font-size="12" font-weight="600" dominant-baseline="central">
+    <text x="348" y="120" text-anchor="start">H-bond</text>
+    <text x="254" y="156" text-anchor="middle">H-bond &#215;2</text>
+    <text x="426" y="156" text-anchor="middle">&#960;-cation</text>
+    <text x="216" y="240" text-anchor="middle">Salt bridge</text>
+    <text x="464" y="240" text-anchor="middle">hydrophobic</text>
+    <text x="240" y="346" text-anchor="middle">hydrophobic</text>
+    <text x="440" y="346" text-anchor="middle">hydrophobic</text>
+  </g>
+
+  <g stroke-width="1.2">
+    <rect x="282" y="32"  width="116" height="40" rx="8" fill="#D6E7F7" stroke="#2C7BC0"/>
+    <rect x="92"  y="72"  width="116" height="40" rx="8" fill="#D6E7F7" stroke="#2C7BC0"/>
+    <rect x="472" y="72"  width="116" height="40" rx="8" fill="#F7E8C9" stroke="#B98A2A"/>
+    <rect x="46"  y="230" width="116" height="40" rx="8" fill="#E5E0F8" stroke="#6A5DC0"/>
+    <rect x="518" y="230" width="116" height="40" rx="8" fill="#DEEAD6" stroke="#6B8C4E"/>
+    <rect x="92"  y="388" width="116" height="40" rx="8" fill="#DEEAD6" stroke="#6B8C4E"/>
+    <rect x="472" y="388" width="116" height="40" rx="8" fill="#DEEAD6" stroke="#6B8C4E"/>
+  </g>
+  <g font-size="14" font-weight="700" text-anchor="middle" dominant-baseline="central">
+    <text x="340" y="52"  fill="#16517F">Gly370</text>
+    <text x="150" y="92"  fill="#16517F">Thr276</text>
+    <text x="530" y="92"  fill="#7A5410">His229</text>
+    <text x="104" y="250" fill="#3F3580">Asp26</text>
+    <text x="576" y="250" fill="#3E5A28">Val23</text>
+    <text x="150" y="408" fill="#3E5A28">Pro274</text>
+    <text x="530" y="408" fill="#3E5A28">Leu371</text>
+  </g>
+
+  <rect x="270" y="222" width="140" height="56" rx="10" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+  <text x="340" y="243" fill="#111111" font-size="15" font-weight="700" text-anchor="middle" dominant-baseline="central">Paclitaxel</text>
+  <text x="340" y="261" fill="#555555" font-size="11" text-anchor="middle" dominant-baseline="central">rank 0 pose</text>
+</svg>

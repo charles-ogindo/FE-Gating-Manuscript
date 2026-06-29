@@ -1,16 +1,21 @@
-TODO: choose and add a license before publishing.
+MIT License
 
-This reviewer repository is provided for the purpose of peer review and
-reproduction of the associated manuscript. No license has been selected yet.
+Copyright (c) 2026 Charles Ogindo, Xchem Pharma Inc.
 
-Until a license is added here, all rights are reserved by the authors and no
-permission is granted to copy, modify, or redistribute this code.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Suggested options to decide between before public release:
-  - MIT (permissive)
-  - BSD-3-Clause (permissive)
-  - Apache-2.0 (permissive + patent grant)
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Note: bundled scientific dependencies carry their own licenses (e.g. ADFRsuite
-is LGPL-2.0); those are not redistributed here and are pulled from the conda
-environment described in docs/meeko_env.lock.txt.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
