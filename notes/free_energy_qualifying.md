@@ -20,7 +20,7 @@ Single-trajectory MM-GBSA computed on the four explicit-TIP3P MD runs that clear
 - Nonbonded: CutoffNonPeriodic, cutoff 1.0 nm (same NonbondedForce class as the MD).
 - Per-frame component split via OpenMM force-group dispatch.
 - Equilibration discard: auto 20 ps for explicit MD (waters relax around the unrestrained solute post-restraint-release).
-- Configurational entropy: OMITTED (normal-mode / quasi-harmonic out of scope). Reported number is enthalpic + solvation only — the standard MM-GBSA quantity.
+- Configurational entropy: computed but EXCLUDED from ranking. An Interaction-Entropy −TΔS term (Gaussian second-order and full exponential-average backends) is available, but its uncertainty swamps the enthalpic signal: across 30 production runs the −TΔS SEM is ~19× the ΔH SEM (median 8.4 vs 0.44 kcal/mol) and reshuffles the absolute-ΔG ordering by a mean of ~7 positions (max 25/30); the full exponential-average estimate is additionally one-frame-dominated in 29/30 runs. Ranking therefore keys on entropy-free ΔH, and each free-energy record carries an `entropy.ranking.unusable_for_ranking` flag. The reported number is enthalpic + solvation only — the standard MM-GBSA quantity. (Normal-mode / quasi-harmonic backends remain out of scope.)
 - Single-trajectory subtraction: ΔG_bind = ⟨E_complex⟩ − ⟨E_receptor⟩ − ⟨E_ligand⟩.
 
 Per-run artifacts: `jobs/<md_id>/free_energy/summary.json` (the full self-describing FE block written by `mmgbsa_runner.compute_md_fe`).
