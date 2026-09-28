@@ -1,0 +1,122 @@
+{
+  "target": "hif2a",
+  "calibration_ligand": "lig_1",
+  "job_id": "plb-hif2a",
+  "status": "derived",
+  "R": 6,
+  "n_replicates_used": 6,
+  "n_good_runs": 6,
+  "good_keys": [
+    "rep1",
+    "rep2",
+    "rep3",
+    "rep4",
+    "rep5",
+    "rep6"
+  ],
+  "core_set_size": 18,
+  "core_hold_frequency_cutoff": 0.7,
+  "core_retention_floor": 0.7,
+  "core_gap": [
+    NaN,
+    NaN
+  ],
+  "core_retentions": [
+    0.9439696106362773,
+    0.9540770609318997,
+    0.9552238805970149,
+    0.9639283833596629,
+    0.9675925925925927,
+    0.969785575048733
+  ],
+  "landing_tolerance_frac": 0.9,
+  "landing_wander_tolerant": true,
+  "landing_tail_tolerance_frac": 0.0,
+  "calibration_path": "/home/xchem/projects/docking_app2/jobs/plb-hif2a/calibration/lig_1.json",
+  "runs": [
+    {
+      "replicate": 1,
+      "seed": 92651997,
+      "md_job_id": "plb-cal-hif2a-92651997",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 3102.3,
+        "verdict": 19.3
+      }
+    },
+    {
+      "replicate": 2,
+      "seed": 2057561152,
+      "md_job_id": "plb-cal-hif2a-2057561152",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 3454.7,
+        "verdict": 23.9
+      }
+    },
+    {
+      "replicate": 3,
+      "seed": 1826705527,
+      "md_job_id": "plb-cal-hif2a-1826705527",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 3301.6,
+        "verdict": 14.4
+      }
+    },
+    {
+      "replicate": 4,
+      "seed": 817311880,
+      "md_job_id": "plb-cal-hif2a-817311880",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 3196.6,
+        "verdict": 14.5
+      }
+    },
+    {
+      "replicate": 5,
+      "seed": 591646042,
+      "md_job_id": "plb-cal-hif2a-591646042",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 2868.8,
+        "verdict": 16.9
+      }
+    },
+    {
+      "replicate": 6,
+      "seed": 2025231955,
+      "md_job_id": "plb-cal-hif2a-2025231955",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 3483.8,
+        "verdict": 17.5
+      }
+    }
+  ]
+}

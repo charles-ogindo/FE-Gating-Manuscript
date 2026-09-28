@@ -1,0 +1,122 @@
+{
+  "target": "cmet",
+  "calibration_ligand": "lig_CHEMBL3402761_1_21",
+  "job_id": "plb-cmet",
+  "status": "derived",
+  "R": 6,
+  "n_replicates_used": 6,
+  "n_good_runs": 6,
+  "good_keys": [
+    "rep1",
+    "rep2",
+    "rep3",
+    "rep4",
+    "rep5",
+    "rep6"
+  ],
+  "core_set_size": 16,
+  "core_hold_frequency_cutoff": 0.7,
+  "core_retention_floor": 0.7,
+  "core_gap": [
+    NaN,
+    NaN
+  ],
+  "core_retentions": [
+    0.8894230769230769,
+    0.9024390243902439,
+    0.9167668269230769,
+    0.9289285714285714,
+    0.9332386363636364,
+    0.9421410891089109
+  ],
+  "landing_tolerance_frac": 0.9,
+  "landing_wander_tolerant": true,
+  "landing_tail_tolerance_frac": 0.0,
+  "calibration_path": "/home/xchem/projects/docking_app2/jobs/plb-cmet/calibration/lig_CHEMBL3402761_1_21.json",
+  "runs": [
+    {
+      "replicate": 1,
+      "seed": 1290809486,
+      "md_job_id": "plb-cal-cmet-1290809486",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 6593.7,
+        "verdict": 74.6
+      }
+    },
+    {
+      "replicate": 2,
+      "seed": 506000021,
+      "md_job_id": "plb-cal-cmet-506000021",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 6843.2,
+        "verdict": 42.2
+      }
+    },
+    {
+      "replicate": 3,
+      "seed": 1650181480,
+      "md_job_id": "plb-cal-cmet-1650181480",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 6690.1,
+        "verdict": 53.2
+      }
+    },
+    {
+      "replicate": 4,
+      "seed": 46949405,
+      "md_job_id": "plb-cal-cmet-46949405",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 7604.9,
+        "verdict": 52.4
+      }
+    },
+    {
+      "replicate": 5,
+      "seed": 978455727,
+      "md_job_id": "plb-cal-cmet-978455727",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 6338.1,
+        "verdict": 53.7
+      }
+    },
+    {
+      "replicate": 6,
+      "seed": 2139246097,
+      "md_job_id": "plb-cal-cmet-2139246097",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 6590.0,
+        "verdict": 48.2
+      }
+    }
+  ]
+}

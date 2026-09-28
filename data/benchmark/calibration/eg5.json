@@ -1,0 +1,122 @@
+{
+  "target": "eg5",
+  "calibration_ligand": "lig_CHEMBL1084143",
+  "job_id": "plb-eg5",
+  "status": "derived",
+  "R": 6,
+  "n_replicates_used": 6,
+  "n_good_runs": 6,
+  "good_keys": [
+    "rep1",
+    "rep2",
+    "rep3",
+    "rep4",
+    "rep5",
+    "rep6"
+  ],
+  "core_set_size": 10,
+  "core_hold_frequency_cutoff": 0.7,
+  "core_retention_floor": 0.7,
+  "core_gap": [
+    NaN,
+    NaN
+  ],
+  "core_retentions": [
+    0.9507462686567164,
+    0.9523809523809523,
+    0.9640000000000001,
+    0.9741935483870967,
+    0.9751196172248804,
+    0.9833333333333333
+  ],
+  "landing_tolerance_frac": 0.9,
+  "landing_wander_tolerant": true,
+  "landing_tail_tolerance_frac": 0.0,
+  "calibration_path": "/home/xchem/projects/docking_app2/jobs/plb-eg5/calibration/lig_CHEMBL1084143.json",
+  "runs": [
+    {
+      "replicate": 1,
+      "seed": 1813536985,
+      "md_job_id": "plb-cal-eg5-1813536985",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 3744.4,
+        "verdict": 15.4
+      }
+    },
+    {
+      "replicate": 2,
+      "seed": 1341002972,
+      "md_job_id": "plb-cal-eg5-1341002972",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 3513.8,
+        "verdict": 16.6
+      }
+    },
+    {
+      "replicate": 3,
+      "seed": 2057227687,
+      "md_job_id": "plb-cal-eg5-2057227687",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 3464.8,
+        "verdict": 21.1
+      }
+    },
+    {
+      "replicate": 4,
+      "seed": 1581905300,
+      "md_job_id": "plb-cal-eg5-1581905300",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 3097.7,
+        "verdict": 8.2
+      }
+    },
+    {
+      "replicate": 5,
+      "seed": 530157051,
+      "md_job_id": "plb-cal-eg5-530157051",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 3344.1,
+        "verdict": 26.8
+      }
+    },
+    {
+      "replicate": 6,
+      "seed": 679047027,
+      "md_job_id": "plb-cal-eg5-679047027",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 3901.9,
+        "verdict": 39.7
+      }
+    }
+  ]
+}

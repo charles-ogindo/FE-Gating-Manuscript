@@ -1,0 +1,114 @@
+{
+  "target": "mcl1",
+  "calibration_ligand": "lig_53",
+  "job_id": "plb-mcl1",
+  "status": "derived",
+  "R": 6,
+  "n_replicates_used": 6,
+  "n_good_runs": 6,
+  "good_keys": [
+    "rep1",
+    "rep2",
+    "rep3",
+    "rep4",
+    "rep5",
+    "rep6"
+  ],
+  "core_set_size": 12,
+  "core_hold_frequency_cutoff": 0.7,
+  "core_retention_floor": 0.7,
+  "core_gap": [
+    NaN,
+    NaN
+  ],
+  "core_retentions": [
+    0.8926151761517616,
+    0.9140106241699867,
+    0.9159751037344398,
+    0.9179620034542314,
+    0.9313333333333333,
+    0.93646408839779
+  ],
+  "landing_tolerance_frac": 0.9,
+  "landing_wander_tolerant": true,
+  "landing_tail_tolerance_frac": 0.0,
+  "calibration_path": "/home/xchem/projects/docking_app2/jobs/plb-mcl1/calibration/lig_53.json",
+  "runs": [
+    {
+      "replicate": 1,
+      "seed": 1375297623,
+      "md_job_id": "plb-cal-mcl1-1375297623",
+      "status": "reused"
+    },
+    {
+      "replicate": 2,
+      "seed": 1745352992,
+      "md_job_id": "plb-cal-mcl1-1745352992",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 2473.9,
+        "verdict": 9.5
+      }
+    },
+    {
+      "replicate": 3,
+      "seed": 1461311450,
+      "md_job_id": "plb-cal-mcl1-1461311450",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 2270.0,
+        "verdict": 9.9
+      }
+    },
+    {
+      "replicate": 4,
+      "seed": 2117093301,
+      "md_job_id": "plb-cal-mcl1-2117093301",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 2232.1,
+        "verdict": 8.6
+      }
+    },
+    {
+      "replicate": 5,
+      "seed": 787225009,
+      "md_job_id": "plb-cal-mcl1-787225009",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 2320.9,
+        "verdict": 5.3
+      }
+    },
+    {
+      "replicate": 6,
+      "seed": 808375336,
+      "md_job_id": "plb-cal-mcl1-808375336",
+      "status": "ok",
+      "phase": null,
+      "error": null,
+      "n_frames": 251,
+      "engine_kind": "openmm_full",
+      "timing_s": {
+        "md": 1912.5,
+        "verdict": 2.2
+      }
+    }
+  ]
+}
